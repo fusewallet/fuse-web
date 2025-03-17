@@ -216,7 +216,7 @@ function ConnectWorld() {
                                 </div>
                                 <img
                                     className={cn(
-                                        'animate__animated mt-auto flex w-full',
+                                        'animate__animated mt-[30px] flex w-full md:mt-auto md:w-[505px]',
                                         isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
                                     )}
                                     src="/images/connect-world-4.png"
@@ -230,7 +230,32 @@ function ConnectWorld() {
                                     'animate__animated flex w-full flex-col rounded-[20px] border border-[#323232] bg-gradient-to-bl from-[#001719] via-[#0a0600] to-[#0a0600] px-[20px] pt-[20px] md:h-[620px] md:flex-1 md:rounded-[30px] md:px-[40px] md:pt-[40px]',
                                     isIntersecting5 ? 'animate__fadeInRight' : 'animate__fadeOutRight',
                                 )}
-                            ></div>
+                            >
+                                <div
+                                    className={cn(
+                                        'animate__animated text-2xl font-normal text-[#eeeeee] md:text-4xl',
+                                        isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                    )}
+                                >
+                                    Account movements, exact tracking.
+                                </div>
+                                <div
+                                    className={cn(
+                                        'animate__animated mt-[20px] text-base font-normal text-[#999999]',
+                                        isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                    )}
+                                >
+                                    Historical data, securely stored.
+                                </div>
+                                <img
+                                    className={cn(
+                                        'animate__animated mx-auto mt-[30px] flex w-full md:mt-auto md:w-[400px]',
+                                        isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                    )}
+                                    src="/images/connect-world-5.png"
+                                    alt=""
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
