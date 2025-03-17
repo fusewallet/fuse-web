@@ -1,8 +1,6 @@
-import { routes } from './routes';
-
-import './styles/global.css';
-
 import { useRoutes } from 'react-router';
+
+import { routes } from './routes';
 
 function App() {
     const views = useRoutes(routes);
