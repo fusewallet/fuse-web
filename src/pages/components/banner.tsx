@@ -50,8 +50,8 @@ function Banner() {
 
     return (
         <>
-            <div className="relative flex min-h-screen w-full items-center justify-center">
-                <div className="absolute z-10 flex h-full w-full max-w-[1430px] flex-col px-[20px] pt-[48px] md:flex-row md:px-[42px] md:pt-[94px]">
+            <div className="relative flex min-h-screen w-full max-w-screen items-center justify-center overflow-hidden">
+                <div className="absolute z-10 flex h-full w-full max-w-[1364px] flex-col px-[20px] pt-[48px] md:flex-row md:px-[42px] md:pt-[94px]">
                     <div ref={dom} className="flex w-full flex-col justify-center pt-2 pb-6 md:h-full md:w-[538px]">
                         <div
                             className={cn(
@@ -87,17 +87,20 @@ function Banner() {
                         </div>
                     </div>
 
-                    <div ref={dom2} className="mb-6 flex flex-1 flex-shrink-0 items-center md:mb-0 md:ml-[122px]">
+                    <div
+                        ref={dom2}
+                        className="mb-6 flex min-w-[330px] flex-1 flex-shrink-0 items-center md:mb-0 md:ml-[122px]"
+                    >
                         <div
                             className={cn(
                                 'animate__animated relative flex h-full w-full overflow-hidden md:h-[550px]',
-                                isIntersecting2 ? 'animate__backInRight' : 'animate__backOutRight',
+                                isIntersecting2 ? 'animate__fadeInRight' : 'animate__fadeOutRight',
                             )}
                         >
                             <div
                                 className={cn(
                                     'absolute top-0 z-[2] h-full flex-shrink-0 duration-300',
-                                    value === 1 && 'z-0 translate-x-[calc(100%-25px)] scale-90 transform',
+                                    value === 1 && 'z-0 translate-x-[calc(100%-30px)] scale-90 transform',
                                 )}
                             >
                                 <img className="h-full" src="/images/banner-1.png" alt="" />
@@ -105,7 +108,7 @@ function Banner() {
                             <div
                                 className={cn(
                                     'absolute top-0 z-[2] h-full flex-shrink-0 duration-300',
-                                    value === 2 && 'z-0 translate-x-[calc(100%-25px)] scale-90',
+                                    value === 2 && 'z-0 translate-x-[calc(100%-30px)] scale-90',
                                 )}
                             >
                                 <img className="h-full" src="/images/banner-2.png" alt="" />

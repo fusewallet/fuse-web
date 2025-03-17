@@ -35,14 +35,14 @@ function Footer() {
         <div className="flex w-full items-center justify-center bg-transparent duration-75">
             <div
                 ref={dom}
-                className="w-full max-w-[1512px]"
+                className="flex w-full max-w-[1512px] flex-col items-center"
                 style={{
                     background:
                         'radial-gradient(100% 100% at 50% 100%, rgba(255, 120, 38, 0.32) 0%, rgba(10, 6, 0, 0.26) 48.5%, rgba(10, 6, 0, 0.32) 100%)',
                 }}
             >
                 <div
-                    className="flex w-full max-w-[1430px] flex-col items-center justify-center px-[20px] pt-[30px] pb-[88px] md:px-[42px] md:pt-[88px] md:pb-[190px]"
+                    className="flex w-full max-w-[1364px] flex-col items-center justify-center px-[20px] pt-[30px] pb-[88px] md:px-[42px] md:pt-[88px] md:pb-[190px]"
                     style={{
                         background:
                             'radial-gradient(100% 100% at 50% 100%, rgba(83, 18, 92, 0.6) 0%, rgba(10, 6, 0, .5) 48.5%, rgba(10, 6, 0, 0) 100%)',
@@ -75,7 +75,7 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="flex h-[60px] w-full max-w-[1430px] items-center justify-between px-[20px] md:h-[76px] md:px-[42px]">
+                <div className="flex h-[60px] w-full max-w-[1364px] items-center justify-between px-[20px] md:h-[76px] md:px-[42px]">
                     <div className="flex items-center">
                         <img
                             className="mr-[10px] inline-flex w-[16px] md:mr-[15px] md:w-[31px]"

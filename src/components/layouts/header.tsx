@@ -25,7 +25,7 @@ function Header() {
                 !isTop && 'bg-black/70',
             )}
         >
-            <div className="flex w-full max-w-[1430px] items-center justify-between px-[20px] md:px-[42px]">
+            <div className="flex w-full max-w-[1364px] items-center justify-between px-[20px] md:px-[42px]">
                 <img className="w-[78px] md:w-[134px]" src="/svg/logo.svg" alt="" />
 
                 <div className="flex">
