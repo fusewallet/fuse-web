@@ -38,6 +38,14 @@ function Footer() {
         toast.success('Coming soon');
     };
 
+    const onDoc = () => {
+        toast.success('Coming soon');
+    };
+
+    const onTwitter = () => {
+        toast.success('Coming soon');
+    };
+
     return (
         <div className="flex w-full items-center justify-center bg-transparent duration-75">
             <div
@@ -93,13 +101,13 @@ function Footer() {
                         <div className="text-sm text-[#eeeeee] md:text-base">Copyright © FUSE 2025</div>
                     </div>
                     <div className="flex items-center gap-x-[22px]">
-                        <Link to="/" className="flex items-center">
+                        <div onClick={onDoc} className="flex cursor-pointer items-center">
                             <Icon className="mr-[6px] h-[18px] w-[18px]" name="icon-doc"></Icon>
                             <p className="text-base font-medium text-white">docs</p>
-                        </Link>
-                        <Link to="/" className="flex items-center">
+                        </div>
+                        <div onClick={onTwitter} className="flex cursor-pointer items-center">
                             <Icon className="h-[15px] w-[15px]" name="icon-x"></Icon>
-                        </Link>
+                        </div>
                     </div>
                 </div>
             </div>
