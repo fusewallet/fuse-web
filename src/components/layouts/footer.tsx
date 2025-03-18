@@ -1,10 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router';
 
+import { useSonnerToast } from '../../lib/toast';
 import { cn } from '../../lib/utils';
 import Icon from '../icon';
 
 function Footer() {
+    const toast = useSonnerToast();
+
     const [isIntersecting, setIsIntersecting] = useState(false);
 
     const dom = useRef<HTMLDivElement>(null);
@@ -30,6 +33,18 @@ function Footer() {
             observer.disconnect();
         };
     }, [observer]);
+
+    const onDownload = () => {
+        toast.success('Coming soon');
+    };
+
+    const onDoc = () => {
+        toast.success('Coming soon');
+    };
+
+    const onTwitter = () => {
+        toast.success('Coming soon');
+    };
 
     return (
         <div className="flex w-full items-center justify-center bg-transparent duration-75">
@@ -60,6 +75,7 @@ function Footer() {
                     </div>
 
                     <div
+                        onClick={onDownload}
                         className={cn(
                             'animate__animated mt-[38px] flex h-[50px] w-[260px] cursor-pointer items-center justify-center rounded-[63px] bg-[rgba(255,207,19,0.9)] duration-150 hover:bg-[rgba(255,207,19,1)] md:mt-[72px] md:h-[68px] md:w-[339px]',
                             isIntersecting ? 'animate__fadeInDown' : 'animate__fadeOutDown',
@@ -85,13 +101,13 @@ function Footer() {
                         <div className="text-sm text-[#eeeeee] md:text-base">Copyright © FUSE 2025</div>
                     </div>
                     <div className="flex items-center gap-x-[22px]">
-                        <Link to="/" className="flex items-center">
+                        <div onClick={onDoc} className="flex cursor-pointer items-center">
                             <Icon className="mr-[6px] h-[18px] w-[18px]" name="icon-doc"></Icon>
                             <p className="text-base font-medium text-white">docs</p>
-                        </Link>
-                        <Link to="/" className="flex items-center">
+                        </div>
+                        <div onClick={onTwitter} className="flex cursor-pointer items-center">
                             <Icon className="h-[15px] w-[15px]" name="icon-x"></Icon>
-                        </Link>
+                        </div>
                     </div>
                 </div>
             </div>
