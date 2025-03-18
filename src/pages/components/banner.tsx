@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
+import { useSonnerToast } from '../../lib/toast';
 import { cn } from '../../lib/utils';
 
 function Banner() {
-    const [value, setValue] = useState<1 | 2>(1);
+    const toast = useSonnerToast();
 
+    const [value, setValue] = useState<1 | 2>(1);
     const [isIntersecting, setIsIntersecting] = useState(false);
     const [isIntersecting2, setIsIntersecting2] = useState(false);
 
@@ -48,6 +50,10 @@ function Banner() {
         return () => clearInterval(intervalId);
     }, []);
 
+    const onDownload = () => {
+        toast.success('Coming soon');
+    };
+
     return (
         <>
             <div className="relative flex min-h-screen w-full max-w-screen items-center justify-center overflow-hidden">
@@ -71,6 +77,7 @@ function Banner() {
                             efficient on-chain experience.
                         </div>
                         <div
+                            onClick={onDownload}
                             className={cn(
                                 'animate__animated mt-[20px] flex h-[50px] w-[260px] cursor-pointer items-center justify-center rounded-[63px] bg-[rgba(255,207,19,0.9)] duration-150 hover:bg-[rgba(255,207,19,1)] md:mt-[48px] md:h-[68px] md:w-[339px]',
                                 isIntersecting ? 'animate__fadeInDown' : 'animate__fadeOutDown',

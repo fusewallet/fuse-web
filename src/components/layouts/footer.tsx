@@ -1,10 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router';
 
+import { useSonnerToast } from '../../lib/toast';
 import { cn } from '../../lib/utils';
 import Icon from '../icon';
 
 function Footer() {
+    const toast = useSonnerToast();
+
     const [isIntersecting, setIsIntersecting] = useState(false);
 
     const dom = useRef<HTMLDivElement>(null);
@@ -30,6 +33,10 @@ function Footer() {
             observer.disconnect();
         };
     }, [observer]);
+
+    const onDownload = () => {
+        toast.success('Coming soon');
+    };
 
     return (
         <div className="flex w-full items-center justify-center bg-transparent duration-75">
@@ -60,6 +67,7 @@ function Footer() {
                     </div>
 
                     <div
+                        onClick={onDownload}
                         className={cn(
                             'animate__animated mt-[38px] flex h-[50px] w-[260px] cursor-pointer items-center justify-center rounded-[63px] bg-[rgba(255,207,19,0.9)] duration-150 hover:bg-[rgba(255,207,19,1)] md:mt-[72px] md:h-[68px] md:w-[339px]',
                             isIntersecting ? 'animate__fadeInDown' : 'animate__fadeOutDown',
