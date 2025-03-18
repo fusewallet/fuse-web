@@ -74,69 +74,91 @@ function ConnectWorld() {
                             <div
                                 ref={dom1}
                                 className={cn(
-                                    'animate__animated flex w-full flex-col rounded-[20px] border border-[#323232] bg-gradient-to-br from-[#00102b] to-[#0a0600] px-[20px] pt-[20px] md:h-[622px] md:w-[480px] md:rounded-[30px] md:px-[40px] md:pt-[40px]',
+                                    'animate__animated rounded-[20px] p-[1px] md:rounded-[30px]',
                                     isIntersecting1 ? 'animate__fadeInLeft' : 'animate__fadeOutLeft',
                                 )}
+                                style={{
+                                    background:
+                                        'linear-gradient(0deg, rgba(27, 22, 17, .7) 0%, rgba(50, 50, 50, .7) 100%)',
+                                }}
                             >
                                 <div
-                                    className={cn(
-                                        'animate__animated text-2xl font-normal text-[#eeeeee] md:text-4xl',
-                                        isIntersecting1 ? 'animate__fadeIn' : 'animate__fadeOut',
-                                    )}
+                                    className="flex w-full flex-col rounded-[20px] px-[20px] pt-[20px] md:h-[622px] md:w-[480px] md:rounded-[30px] md:px-[40px] md:pt-[40px]"
+                                    style={{
+                                        background: 'linear-gradient(160deg, #00102B 6.41%, #0A0600 59.18%)',
+                                    }}
                                 >
-                                    Multiple chains, one wallet.
-                                </div>
+                                    <div
+                                        className={cn(
+                                            'animate__animated text-2xl font-normal text-[#eeeeee] md:text-4xl',
+                                            isIntersecting1 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                        )}
+                                    >
+                                        Multiple chains, one wallet.
+                                    </div>
 
-                                <div
-                                    className={cn(
-                                        'animate__animated mt-[10px] text-sm font-normal text-[#999999] md:mt-[20px] md:text-base',
-                                        isIntersecting1 ? 'animate__fadeIn' : 'animate__fadeOut',
-                                    )}
-                                >
-                                    IC Chain, Ethereum Chain, and BNB Chain are now supported.
+                                    <div
+                                        className={cn(
+                                            'animate__animated mt-[10px] text-sm font-normal text-[#999999] md:mt-[20px] md:text-base',
+                                            isIntersecting1 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                        )}
+                                    >
+                                        IC Chain, Ethereum Chain, and BNB Chain are now supported.
+                                    </div>
+
+                                    <img
+                                        className={cn(
+                                            'animate__animated mt-[30px] w-full md:mt-auto',
+                                            isIntersecting1 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                        )}
+                                        src="/images/connect-world-1.png"
+                                        alt=""
+                                    />
                                 </div>
-                                <img
-                                    className={cn(
-                                        'animate__animated mt-[30px] w-full md:mt-auto',
-                                        isIntersecting1 ? 'animate__fadeIn' : 'animate__fadeOut',
-                                    )}
-                                    src="/images/connect-world-1.png"
-                                    alt=""
-                                />
                             </div>
 
                             <div className="flex flex-1 flex-col gap-[20px] md:gap-[30px]">
                                 <div
                                     ref={dom2}
                                     className={cn(
-                                        'animate__animated flex w-full flex-col rounded-[20px] border border-[#323232] bg-gradient-to-b from-[#0a0600] to-[#1e0b31] px-[20px] pt-[20px] md:flex-1 md:flex-row md:rounded-[30px] md:px-[40px] md:pt-[40px]',
+                                        'animate__animated rounded-[20px] p-[1px] md:rounded-[30px]',
                                         isIntersecting2 ? 'animate__fadeInRight' : 'animate__fadeOutRight',
                                     )}
+                                    style={{
+                                        background: 'linear-gradient(0deg, rgba(27, 22, 17, .7) 0%, #323232 100%)',
+                                    }}
                                 >
-                                    <img
-                                        className={cn(
-                                            'animate__animated order-2 mt-[30px] flex w-full md:order-1 md:mt-0 md:w-[300px]',
-                                            isIntersecting2 ? 'animate__fadeIn' : 'animate__fadeOut',
-                                        )}
-                                        src="/images/connect-world-2.png"
-                                        alt=""
-                                    />
-                                    <div className="order-1 flex flex-col md:order-2 md:ml-[58px]">
-                                        <div
+                                    <div
+                                        className="flex w-full flex-col rounded-[20px] px-[20px] pt-[20px] md:flex-1 md:flex-row md:rounded-[30px] md:px-[40px] md:pt-[40px]"
+                                        style={{
+                                            background: 'linear-gradient(215deg, #0A0600 68.13%, #1E0B31 97.68%)',
+                                        }}
+                                    >
+                                        <img
                                             className={cn(
-                                                'animate__animated text-2xl font-normal text-[#eeeeee] md:text-4xl',
+                                                'animate__animated order-2 mt-[30px] flex w-full md:order-1 md:mt-0 md:w-[300px]',
                                                 isIntersecting2 ? 'animate__fadeIn' : 'animate__fadeOut',
                                             )}
-                                        >
-                                            Automatically optimize for the best exchange rate
-                                        </div>
-                                        <div
-                                            className={cn(
-                                                'animate__animated mt-[10px] line-clamp-2 text-sm font-normal text-[#999999] md:mt-[23px] md:text-base',
-                                                isIntersecting2 ? 'animate__fadeIn' : 'animate__fadeOut',
-                                            )}
-                                        >
-                                            Get the best rates and save on transaction fees.
+                                            src="/images/connect-world-2.png"
+                                            alt=""
+                                        />
+                                        <div className="order-1 flex flex-col md:order-2 md:ml-[58px]">
+                                            <div
+                                                className={cn(
+                                                    'animate__animated text-2xl font-normal text-[#eeeeee] md:text-4xl',
+                                                    isIntersecting2 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                                )}
+                                            >
+                                                Automatically optimize for the best exchange rate
+                                            </div>
+                                            <div
+                                                className={cn(
+                                                    'animate__animated mt-[10px] line-clamp-2 text-sm font-normal text-[#999999] md:mt-[23px] md:text-base',
+                                                    isIntersecting2 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                                )}
+                                            >
+                                                Get the best rates and save on transaction fees.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -144,11 +166,19 @@ function ConnectWorld() {
                                 <div
                                     ref={dom3}
                                     className={cn(
-                                        'animate__animated flex flex-1 flex-col gap-[20px] md:gap-[30px]',
+                                        'animate__animated rounded-[20px] p-[1px] md:rounded-[30px]',
                                         isIntersecting3 ? 'animate__fadeInRight' : 'animate__fadeOutRight',
                                     )}
+                                    style={{
+                                        background: 'linear-gradient(0deg, rgba(27, 22, 17, .7) 0%, #323232 100%)',
+                                    }}
                                 >
-                                    <div className="flex w-full flex-col rounded-[20px] border border-[#323232] bg-gradient-to-br from-[#0a0600] to-[#0a2600] px-[20px] pt-[13px] md:flex-1 md:flex-row md:rounded-[30px] md:px-[40px]">
+                                    <div
+                                        className="flex w-full flex-col rounded-[20px] bg-gradient-to-br from-[#0a0600] to-[#0a2600] px-[20px] pt-[13px] md:flex-1 md:flex-row md:rounded-[30px] md:px-[40px]"
+                                        style={{
+                                            background: 'linear-gradient(134deg, #0A0600 57.47%, #0A2600 94.49%)',
+                                        }}
+                                    >
                                         <div className="mr-[20px] flex flex-col md:mr-[58px]">
                                             <div
                                                 className={cn(
@@ -185,67 +215,88 @@ function ConnectWorld() {
                             <div
                                 ref={dom4}
                                 className={cn(
-                                    'animate__animated flex w-full flex-col rounded-[20px] border border-[#323232] bg-gradient-to-bl from-[#0a0600] to-[#1b1000] px-[20px] pt-[20px] md:h-[620px] md:flex-1 md:rounded-[30px] md:px-[40px] md:pt-[40px]',
+                                    'animate__animated rounded-[20px] p-[1px] md:rounded-[30px]',
                                     isIntersecting4 ? 'animate__fadeInLeft' : 'animate__fadeOutLeft',
                                 )}
+                                style={{
+                                    background:
+                                        'linear-gradient(0deg, rgba(27, 22, 17, .7) 0%, rgba(50, 50, 50, .7) 100%)',
+                                }}
                             >
                                 <div
-                                    className={cn(
-                                        'animate__animated text-2xl font-normal text-[#eeeeee] md:text-4xl',
-                                        isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
-                                    )}
+                                    className="flex w-full flex-col rounded-[20px] px-[20px] pt-[20px] md:h-[620px] md:flex-1 md:rounded-[30px] md:px-[40px] md:pt-[40px]"
+                                    style={{ background: 'linear-gradient(219deg, #0A0600 50.81%, #1B1100 84.23%)' }}
                                 >
-                                    Multiple accounts, all assets in one place
+                                    <div
+                                        className={cn(
+                                            'animate__animated text-2xl font-normal text-[#eeeeee] md:text-4xl',
+                                            isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                        )}
+                                    >
+                                        Multiple accounts, all assets in one place
+                                    </div>
+                                    <div
+                                        className={cn(
+                                            'animate__animated mt-[20px] text-base font-normal text-[#999999]',
+                                            isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                        )}
+                                    >
+                                        Import unlimited accounts and switch between them seamlessly.
+                                    </div>
+                                    <img
+                                        className={cn(
+                                            'animate__animated mt-[30px] flex w-full md:mt-auto md:w-[505px]',
+                                            isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                        )}
+                                        src="/images/connect-world-4.png"
+                                        alt=""
+                                    />
                                 </div>
-                                <div
-                                    className={cn(
-                                        'animate__animated mt-[20px] text-base font-normal text-[#999999]',
-                                        isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
-                                    )}
-                                >
-                                    Import unlimited accounts and switch between them seamlessly.
-                                </div>
-                                <img
-                                    className={cn(
-                                        'animate__animated mt-[30px] flex w-full md:mt-auto md:w-[505px]',
-                                        isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
-                                    )}
-                                    src="/images/connect-world-4.png"
-                                    alt=""
-                                />
                             </div>
 
                             <div
                                 ref={dom5}
                                 className={cn(
-                                    'animate__animated flex w-full flex-col rounded-[20px] border border-[#323232] bg-gradient-to-bl from-[#001719] via-[#0a0600] to-[#0a0600] px-[20px] pt-[20px] md:h-[620px] md:flex-1 md:rounded-[30px] md:px-[40px] md:pt-[40px]',
+                                    'animate__animated rounded-[20px] p-[1px] md:rounded-[30px]',
                                     isIntersecting5 ? 'animate__fadeInRight' : 'animate__fadeOutRight',
                                 )}
+                                style={{
+                                    background:
+                                        'linear-gradient(0deg, rgba(27, 22, 17, .7) 0%, rgba(50, 50, 50, .7) 100%)',
+                                }}
                             >
                                 <div
-                                    className={cn(
-                                        'animate__animated text-2xl font-normal text-[#eeeeee] md:text-4xl',
-                                        isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
-                                    )}
+                                    className="flex w-full flex-col rounded-[20px] px-[20px] pt-[20px] md:h-[620px] md:flex-1 md:rounded-[30px] md:px-[40px] md:pt-[40px]"
+                                    style={{
+                                        background:
+                                            'linear-gradient(205deg, #001719 6.34%, #0A0600 37.79%, #0A0600 89.66%)',
+                                    }}
                                 >
-                                    Account movements, exact tracking.
+                                    <div
+                                        className={cn(
+                                            'animate__animated text-2xl font-normal text-[#eeeeee] md:text-4xl',
+                                            isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                        )}
+                                    >
+                                        Account movements, exact tracking.
+                                    </div>
+                                    <div
+                                        className={cn(
+                                            'animate__animated mt-[20px] text-base font-normal text-[#999999]',
+                                            isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                        )}
+                                    >
+                                        Historical data, securely stored.
+                                    </div>
+                                    <img
+                                        className={cn(
+                                            'animate__animated mx-auto mt-[30px] flex w-full md:mt-auto md:w-[400px]',
+                                            isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
+                                        )}
+                                        src="/images/connect-world-5.png"
+                                        alt=""
+                                    />
                                 </div>
-                                <div
-                                    className={cn(
-                                        'animate__animated mt-[20px] text-base font-normal text-[#999999]',
-                                        isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
-                                    )}
-                                >
-                                    Historical data, securely stored.
-                                </div>
-                                <img
-                                    className={cn(
-                                        'animate__animated mx-auto mt-[30px] flex w-full md:mt-auto md:w-[400px]',
-                                        isIntersecting4 ? 'animate__fadeIn' : 'animate__fadeOut',
-                                    )}
-                                    src="/images/connect-world-5.png"
-                                    alt=""
-                                />
                             </div>
                         </div>
                     </div>
