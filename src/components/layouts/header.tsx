@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router';
 
 import { useSonnerToast } from '../../lib/toast';
 import { cn } from '../../lib/utils';
