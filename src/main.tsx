@@ -3,7 +3,11 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router';
 
-import './index.css';
+import 'animate.css';
+import './assets/css/tailwind.css';
+import './assets/css/fonts.scss';
+import './assets/css/main.scss';
+import './assets/iconfont/iconfont.js';
 
 import App from './App';
 
