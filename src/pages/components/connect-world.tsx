@@ -3,21 +3,18 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { cn } from '../../lib/utils';
 
 function ConnectWorld() {
-    // 为每个元素创建独立的可见性状态
     const [isIntersecting1, setIsIntersecting1] = useState(false);
     const [isIntersecting2, setIsIntersecting2] = useState(false);
     const [isIntersecting3, setIsIntersecting3] = useState(false);
     const [isIntersecting4, setIsIntersecting4] = useState(false);
     const [isIntersecting5, setIsIntersecting5] = useState(false);
 
-    // 为每个元素创建引用
     const dom1 = useRef(null);
     const dom2 = useRef(null);
     const dom3 = useRef(null);
     const dom4 = useRef(null);
     const dom5 = useRef(null);
 
-    // 创建 IntersectionObserver 实例
     const observer = useMemo(
         () =>
             new IntersectionObserver((entries) => {
@@ -47,7 +44,6 @@ function ConnectWorld() {
         [],
     );
 
-    // 在 useEffect 中观察每个元素
     useEffect(() => {
         if (dom1.current) observer.observe(dom1.current);
         if (dom2.current) observer.observe(dom2.current);
