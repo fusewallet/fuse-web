@@ -9,7 +9,6 @@ function ConnectWorld() {
     const [isIntersecting3, setIsIntersecting3] = useState(false);
     const [isIntersecting4, setIsIntersecting4] = useState(false);
     const [isIntersecting5, setIsIntersecting5] = useState(false);
-    const [isIntersecting6, setIsIntersecting6] = useState(false);
 
     // 为每个元素创建引用
     const dom1 = useRef(null);
@@ -17,7 +16,6 @@ function ConnectWorld() {
     const dom3 = useRef(null);
     const dom4 = useRef(null);
     const dom5 = useRef(null);
-    const dom6 = useRef(null);
 
     // 创建 IntersectionObserver 实例
     const observer = useMemo(
@@ -40,9 +38,7 @@ function ConnectWorld() {
                         case dom5.current:
                             setIsIntersecting5(entry.isIntersecting);
                             break;
-                        case dom6.current:
-                            setIsIntersecting6(entry.isIntersecting);
-                            break;
+
                         default:
                             break;
                     }
@@ -58,7 +54,6 @@ function ConnectWorld() {
         if (dom3.current) observer.observe(dom3.current);
         if (dom4.current) observer.observe(dom4.current);
         if (dom5.current) observer.observe(dom5.current);
-        if (dom6.current) observer.observe(dom6.current);
 
         return () => {
             observer.disconnect();
